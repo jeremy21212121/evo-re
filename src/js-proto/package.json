@@ -1,0 +1,29 @@
+{
+  "name": "evo-re-js",
+  "version": "0.0.1",
+  "description": "JS first implementation of RE'd app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo 'no tests'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeremy21212121/evo-re.git"
+  },
+  "keywords": [
+    "js",
+    "api",
+    "client",
+    "reverse",
+    "engineer"
+  ],
+  "author": "Jeremy Poole",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jeremy21212121/evo-re/issues"
+  },
+  "homepage": "https://github.com/jeremy21212121/evo-re#readme",
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
+}
