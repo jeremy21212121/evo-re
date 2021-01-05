@@ -1,10 +1,10 @@
 # Reverse Engineering of an Undocumented API
 
-This is the first prototype in bash and now the second is being written in JS.
+This is the first prototype in bash and now the second is functional in JS.
 
 The API is being reversed engineered from an android app running in an android emulator while capturing traffic using [mitmproxy](https://mitmproxy.org/). I've also decompiled the APK with [jadx](https://github.com/skylot/jadx) so I can poke around in the source when needed.
 
-Getting the emulated android environment setup correctly was tedious. I have documented the process meticulously and will probably write it up elsewhere.
+Getting the emulated android environment setup correctly with HTTPS interception was tedious. I have documented the process meticulously and will probably write it up elsewhere.
 
 # Why?
 
@@ -20,6 +20,8 @@ I'm currently writing a small library which makes calling the API easy, using th
 
 # Todo
 
-- I noticed one small difference on the response from the availableVehicles endpoint; the JSON response is prefixed with "[]". This is typically done to cause browser JSON parsers to error. I will need to double check to make sure all headers are identical. UPDATE: Still a mystery but I am working around it.
+- ~~~I noticed one small difference on the response from the availableVehicles endpoint; the JSON response is prefixed with "[]". This is typically done to cause browser JSON parsers to error. I will need to double check to make sure all headers are identical.~~~ UPDATE: Still a mystery but I am working around it with custom JS parsing logic. UPDATE 2: All headers are now correct in the JS version and it no longer happens.
 
-- I still haven't captured the login and reserving flows, as listing can be done without logging in. At some point, I need to capture and reimplement those flows, That will be done in the JS version. Honestly, I'm just tired of trawling through requests in mitmproxy right now.
+- I still haven't captured the login and reserving flows, as listing can be done without logging in. Next, I need to capture and reimplement those flows. Honestly, I'm just tired of trawling through requests in mitmproxy right now.
+
+- Make TypeScript version. Mostly I just need to write types for all the things (API responses, classes, etc).

@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/jeremy21212121/evo-re#readme",
   "dependencies": {
-    "axios": "^0.21.1"
+    "axios": "^0.21.1",
+    "global-agent": "^2.1.12"
   }
 }
