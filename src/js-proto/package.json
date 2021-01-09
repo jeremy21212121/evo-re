@@ -4,7 +4,8 @@
   "description": "JS first implementation of RE'd app",
   "main": "index.js",
   "scripts": {
-    "test": "echo 'no tests'"
+    "test": "echo 'no tests'",
+    "example": "GLOBAL_AGENT_HTTP_PROXY=http://127.0.0.1:8080 NODE_EXTRA_CA_CERTS=/home/$USER/.mitmproxy/mitmproxy-ca-cert.pem node -r 'global-agent/bootstrap' examples/getAvailableVehicles.js"
   },
   "repository": {
     "type": "git",

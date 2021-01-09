@@ -1,5 +1,4 @@
 const axios = require("axios");
-const fs = require("fs");
 
 // Comes from the decompiled android app.
 const config = {
@@ -169,24 +168,4 @@ class AnonApiData {
   }
 }
 
-const main = async () => {
-  const anonApiData = new AnonApiData();
-  try {
-    const [
-      models,
-      options,
-      parking,
-      homezones,
-      cities,
-      vehicles,
-    ] = await anonApiData.getAll();
-    const filePath = `${process.cwd()}/data/vehicles-${Date.now()}.json`;
-    fs.writeFileSync(filePath, JSON.stringify(vehicles));
-    console.log(`Success! ${vehicles.length} vehicles saved to ${filePath}`);
-  } catch (e) {
-    console.log("Oops!");
-    console.error(e);
-  }
-};
-
-main();
+module.exports = AnonApiData;
